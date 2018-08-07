@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='result.css')}}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action active">
+    Submitted Info
+  </a>
+  <a href="#" class="list-group-item list-group-item-action">Email:{{email}}</a>
+  <a href="#" class="list-group-item list-group-item-action">First Name: {{firstname}}</a>
+  <a href="#" class="list-group-item list-group-item-action">Last Name: {{lastname}}</a>
+  <a href="#" class="list-group-item list-group-item-action disabled">Password Set</a>
+</div>
+</body>
+</html>

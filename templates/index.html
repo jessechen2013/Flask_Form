@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reg Form</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+	<link rel="stylesheet" type="text/css" href="">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<form class="border border-secondary" action='/check' method="post">
+		{% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-danger" role="alert">
+  			<strong>Oh snap!</strong> <p>{{message}}</pcopy>
+  			<form action='/reload' method="post">
+      		<input class="btn btn-success" type="submit" name="go_back" value="Go Back"></div>
+    		</form>
+			</div>  
+      {% endfor %}
+    {% endif %}
+  	{% endwith %}
+		<div class="form-group">
+    	<label>Email address</label>
+    	<input type="text" name="email" placeholder="name@example.com">
+  	</div>
+
+  	<div class="form-group">
+    	<div class="col">
+      	<input type="text"  name="firstname" placeholder="First name">
+    	</div>
+    	<div class="col">
+      	<input type="text"  name="lastname" placeholder="Last name">
+    	</div>
+  	</div>
+  	<div class="form-group">
+    	<label>Password</label>
+      	<input type="text" name = "password" placeholder="Password">
+      	<input type="text" name = "password_confirm" placeholder="Comfirm">
+  	</div>
+  	<div class="form-group">
+  	<input type="submit" class="btn btn-info" value="Submit"></div>
+	</form>
+</body>
+</html>
